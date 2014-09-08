@@ -32,8 +32,8 @@
                         <div class="inner">
                             <a href="#me" class="item">Biography</a>
                             <a href="#pj" class="item">Projects</a>
-                            <a href="#wr" class="item">Writing</a>
-                            <a href="#mp" class="item">Contact Me</a>
+                            <a href="#em" class="item">Contact Me</a>
+                            <a href="#mp" class="item">Find Me</a>
                             <a href="#hi" class="item top-1">
                                 <i class="fa fa-rocket"></i>
                             </a>
@@ -89,9 +89,9 @@
         <article id="me">
             <div class="inner">
                 <div class="container-fluid">
-                    <div class="avatar"></div>
+                    <div class="andrew avatar"></div>
                     <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1 
+                        <div class="col-xs-10 col-xs-offset-1
                                     col-sm-5 col-sm-offset-1
                                     left-justified">
                             <p class="first">
@@ -107,37 +107,40 @@
                         </div>
                     </div>
                 </div>
+                <div id="colors"></div>
             </div>
         </article>
 
         <!-- Projects -->
         <article id="pj">
-            <div id="colors"></div>
             <div class="inner">
-                <h2>Projects</h2>
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-3 project bedtime">
-                            <div class="mock"></div>
-                            <div class="info">
+                    <div class="code avatar">
+                        <i class="fa fa-desktop back"></i>
+                        <i class="fa fa-mobile front"></i>
+                    </div>
+                    <div class="row left-margin-10 right-margin-10">
+                        <div class="col-sm-4 project">
+                            <div class="info one">
                                 <i class="fa fa-moon-o"></i>
-                                <span class="logo">Bedtime</span>
-                                <span class="desc">A daily journal that isn't a chore.</span>
+                                <h2 class="no-margin no-padding">Bedtime</h2>
+                                <p>A daily journal that isn't a chore. iOS app for memorializing your day in an easy, fun way.</p>
+                                <p>A daily journal that isn't a chore. iOS app for memorializing your day in an easy, fun way.</p>
                             </div>
                         </div>
-                        <div class="col-sm-6 project canopy on">
-                            <div class="mock"></div>
-                            <div class="info">
-                                <span class="logo">Canopy</span>
-                                <span class="desc">Home energy data visualization and reporting. This is more information because we're on the bigger expanded view. More text will go here, why won't peter come back??</span>
+                        <div class="col-sm-4 project">
+                            <div class="info two">
+                                <i class="fa fa-lightbulb-o"></i>
+                                <h2 class="no-margin no-padding">Canopy</h2>
+                                <p>Home energy data visualization and reporting app&mdash;import energy data to make better decisions.<p>
+                                <p>Home energy data visualization and reporting app&mdash;import energy data to make better decisions. app&mdash;import energy data to make better decisions<p>
                             </div>
                         </div>
-                        <div class="col-sm-3 project bits">
-                            <div class="mock"></div>
-                            <div class="info">
+                        <div class="col-sm-4 project">
+                            <div class="info three">
                                 <i class="fa fa-flask"></i>
-                                <span class="logo">Particle Bits</span>
-                                <span class="desc">Technology and internet thoughts.</span>
+                                <h2 class="no-margin no-padding">Particle Bits</h2>
+                                <p>Soon-to-be blog on web development, design, technology, and internet thoughts.</p>
                             </div>
                         </div>
                     </div>
@@ -145,25 +148,73 @@
             </div>
         </article>
 
-        <!-- Writing -->
-        <article id="wr">
+        <!-- Form -->
+        <article id="em">
             <div class="inner">
-                <h2>Writing</h2>
                 <div class="container-fluid">
-                    <div class="row">
-                        <div class="col-sm-5 col-sm-offset-1 article left">
-                            <a class="box">
-                                <h3>FCC Jurisdiction over ISPs in Protocol-Specific Bandwidth Throttling</h3>
-                                <cite>15 Mich. Telecomm. Tech. L. Rev. 517 (2009)</cite>
-                                <p>Law review note in support of the FCC's ability to enforce net-neutrality among internet service providers.</p>
-                            </a>
+                    <h2 class="bottom-margin-50">Send me a note!</h2>
+                    <div class="row left-justified">
+                        <div class="col col-xs-8 col-xs-offset-1">
+                            <form id="contact" class="form" method="post" action="contact.php">
+                                <div class="fields">
+                                    <div id="name"
+                                         class="field field-current top-margin-10"
+                                         data-order="1">
+                                        <h3 class="bottom-margin-30 anim-upper">What is your name?</h3>
+                                        <input type="text"
+                                               name="name"
+                                               placeholder="Andrew Gioia"
+                                               class="bigfield anim-lower" />
+                                    </div>
+                                    <div id="email"
+                                         class="field top-margin-10"
+                                         data-order="2">
+                                        <h3 class="bottom-margin-30 anim-upper">What is your email address?</h3>
+                                        <input type="text"
+                                               name="email"
+                                               placeholder="hi@andrewgioia.com"
+                                               class="bigfield anim-lower" />
+                                    </div>
+                                    <div id="note"
+                                         class="field top-margin-10"
+                                         data-order="3">
+                                        <h3 class="bottom-margin-30 anim-upper">What can I do for you?</h3>
+                                        <textarea name="note"
+                                               placeholder="Something's been on my mind a lot lately and I..."
+                                               class="bigfield anim-lower"
+                                               cols="20"
+                                               rows="5"></textarea>
+                                    </div>
+                                </div>
+                            </form>
                         </div>
-                        <div class="col-sm-5 article right">
-                            <a class="box">
-                                <h3>HIT or Miss: Getting Electronic Health Records Right the First Time</h3>
-                                <cite>UM Law 672&mdash;Health Law Regulation</cite>
-                                <p>Review of then-current EHR solutions and suggestions for best design and implementation.</p>
+                        <div class="col col-xs-2 top-padding-20 steps">
+                            <a href="javascript:;"
+                               data-field="name"
+                               data-order="1"
+                               class="on step-link dot block-level right-padding-20 bottom-padding-5">
+                                <i class="fa fa-circle"></i>
                             </a>
+                            <a href="javascript:;"
+                               data-field="email"
+                               data-order="2"
+                               class="step-link dot block-level right-padding-20 bottom-padding-5">
+                                <i class="fa fa-circle"></i>
+                            </a>
+                            <a href="javascript:;"
+                               data-field="note"
+                               data-order="3"
+                               class="step-link dot block-level right-padding-20 bottom-padding-15">
+                                <i class="fa fa-circle"></i>
+                            </a>
+                            <a href="javascript:;"
+                               class="continue step-link block-level"
+                               id="continue"
+                               data-field="email"
+                               data-order="2">
+                                Continue
+                            </a>
+                            <span class="block-level right-justified"
                         </div>
                     </div>
                 </div>
@@ -180,7 +231,11 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-sm-12">
-                        Copyright &copy; 2014 Andrew Gioia and friends.
+                        <a href="#me">Biography</a> / <a href="#pj">Projects</a> / <a href="#em">Contact me</a> / <a href="#mp">Find me</a>
+                        <br />
+                        &copy; 2014 Andrew Gioia &amp; friends. Made with &nbsp;&#9829;&nbsp; in Philadelphia, PA.
+                        <br />
+                        <em>As iron sharpens iron, so one person sharpens another.</em> &mdash;Proverbs 27:17
                     </div>
                 </div>
             </div>
@@ -195,7 +250,7 @@
     <script>!window.jQuery.ui && document.write('<script src="public/js/jquery-ui.min.js"><\/script>')</script>
     <script src="public/js/jquery.scrollTo.min.js"></script>
 
-    <!-- Supersized -->
+    <!-- Plugins -->
     <script src="public/js/supersized.min.js"></script>
 
     <!-- Background transitions -->
@@ -203,17 +258,17 @@
         jQuery( function($) {
             $.supersized({
                 // Functionality
-                slide_interval   : 0,      
-                transition       : 1,          
-                transition_speed : 15000,       
+                slide_interval   : 0,
+                transition       : 1,
+                transition_speed : 15000,
                 // Components
-                slide_links      : 'blank',    
-                slides           : [           
+                slide_links      : 'blank',
+                slides           : [
                     {image : 'public/img/backgrounds/gazebo.blur.jpg', title : '', thumb : '', url : ''},
                     {image : 'public/img/backgrounds/museum.blur.jpg', title : '', thumb : '', url : ''},
                     {image : 'public/img/backgrounds/street.blur.jpg', title : '', thumb : '', url : ''}
                                    ]
-                
+
             });
         });
     </script>
@@ -225,7 +280,7 @@
             if ( y > 1) {
                 $( 'header' ).addClass( 'more' );
             } else {
-                $( 'header' ).removeClass( 'more' );                
+                $( 'header' ).removeClass( 'more' );
             }
         });
     </script>
@@ -234,8 +289,61 @@
     <script>
         $( 'menu .item' ).on( 'click', function() {
             var id = $( this ).attr( 'href' );
-            //alert(id);
             $.scrollTo( id, 1000, {easing:'easeInOutQuart'} );
+            return false;
+        });
+    </script>
+
+    <!-- Contact form steps -->
+    <script>
+        $( '.step-link' ).on( 'click', function() {
+
+            // get the vars
+            var field = $( this ).data( 'field' );
+            var order = $( this ).data( 'order' );
+            var current = $( '.field-current' ).data( 'order' );
+
+            //alert( order );
+
+            // if we're on submit, do that instead of everything else
+            if ( field == 'submit' ) {
+                $( '#contact' ).submit();
+                return false;
+            }
+
+            // set the direction
+            if ( order > current ) {
+                $( '.fields' ).addClass( 'display-next' ).removeClass( 'display-prev' );
+            } else if ( order < current ) {
+                $( '.fields' ).addClass( 'display-prev' ).removeClass( 'display-next' );
+            }
+
+            // change the circle status
+            $( '.dot.on' ).removeClass( 'on' );
+            $( '.dot[data-field="'+field+'"]' ).addClass( 'on' );
+
+            // change the continue button
+            if ( order == 3 ) {
+                $( '#continue' ).data( 'field', 'submit' ).data( 'order', 4 )
+                    .html( 'Submit!' ).addClass( 'submit' );
+            } else if ( order == 2 ) {
+                $( '#continue' ).data( 'field', 'note' ).data( 'order', 3 )
+                    .html( 'Continue' ).removeClass( 'submit' );
+            } else if ( order == 1 ) {
+                $( '#continue' ).data( 'field', 'email' ).data( 'order', 2 )
+                    .html( 'Continue' ).removeClass( 'submit' );
+            }
+
+            // set the animations
+            $( '.field-hide' ).removeClass( 'field-hide' );
+            $( '.field-current' ).removeClass( 'field-current field-show' ).addClass( 'field-hide' );
+            $( '#'+field ).removeClass( 'field-hide' ).addClass( 'field-current field-show' );
+
+            // clear it out after animations
+            setTimeout( function() {
+                $( '.fields' ).removeClass( 'display-next display-prev' );
+            }, 1000 );
+
             return false;
         });
     </script>
@@ -262,7 +370,7 @@
             });
             infowindow.open(map,marker);
             google.maps.event.addListener(marker, 'click', function() {
-                
+
             });
         }
         google.maps.event.addDomListener(window, 'load', initialize);

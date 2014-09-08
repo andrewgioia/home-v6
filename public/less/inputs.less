@@ -1,0 +1,206 @@
+/*
+ * Contact form animations */
+
+/* Switch view animation
+ * (we hide the current view, switch the view class and show it again) */
+/*
+.form.field-show {
+	-webkit-animation: animFadeIn 0.5s;
+	animation: animFadeIn 0.5s;
+}
+
+@-webkit-keyframes animFadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes animFadeIn {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+.form.field-show .field {
+	-webkit-animation: animMove 0.5s;
+	animation: animMove 0.5s;
+}
+
+@-webkit-keyframes animMove {
+	from { top: 100px; }
+}
+
+@keyframes animMove {
+	from { top: 100px; }
+}
+*/
+
+/* Visibility control of elements */
+
+.form {
+
+    .field {
+        position: absolute;
+        visibility: hidden;
+        width: 100%;
+    }
+    .field-current { visibility: visible; }
+    .field-hide { visibility: hidden; }
+    .field-show { visibility: visible !important; }
+
+    /* Advancing to next question */
+
+    .display-next {
+
+        /* Hide current item */
+        .field-hide {
+            visibility: visible;
+            .anim-lower,
+            .anim-upper {
+            	-webkit-animation: animHideNext 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+            	animation: animHideNext 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+            }
+            .anim-lower {
+            	-webkit-animation-delay: 0.1s;
+            	animation-delay: 0.1s;
+            }
+        }
+
+        /* Show new item */
+        .field-show {
+            .anim-lower,
+            .anim-upper {
+            	-webkit-animation: animShowNext 0.5s cubic-bezier(0.7,0,0.3,1) both 0.15s;
+            	animation: animShowNext 0.5s cubic-bezier(0.7,0,0.3,1) both 0.15s;
+            }
+            .anim-lower {
+            	-webkit-animation-delay: 0.25s;
+            	animation-delay: 0.25s;
+            }
+        }
+    }
+
+    /* Going to previous question */
+
+    .display-prev {
+
+        /* Hide current item */
+        .field-hide {
+	        visibility: visible;
+            .anim-lower,
+            .anim-upper {
+            	-webkit-animation: animHidePrev 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+            	animation: animHidePrev 0.5s cubic-bezier(0.7,0,0.3,1) forwards;
+            }
+            .anim-upper {
+            	-webkit-animation-delay: 0.1s;
+            	animation-delay: 0.1s;
+            }
+        }
+
+        /* Show previous question */
+
+        .field-show {
+            .anim-lower,
+            .anim-upper {
+            	-webkit-animation: animShowPrev 0.5s cubic-bezier(0.7,0,0.3,1) both 0.15s;
+            	animation: animShowPrev 0.5s cubic-bezier(0.7,0,0.3,1) both 0.15s;
+            }
+            .anim-upper {
+            	-webkit-animation-delay: 0.25s;
+            	animation-delay: 0.25s;
+            }
+        }
+    }
+}
+
+
+/*
+ * Animation defintions */
+
+@-webkit-keyframes animHideNext {
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-500px,0);
+    }
+}
+
+@keyframes animHideNext {
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-500px,0);
+        transform: translate3d(0,-500px,0);
+    }
+}
+
+@-webkit-keyframes animShowNext {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0,500px,0);
+    }
+}
+
+@keyframes animShowNext {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0,500px,0);
+        transform: translate3d(0,500px,0);
+    }
+}
+
+@-webkit-keyframes animHidePrev {
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0,500px,0);
+    }
+}
+
+@keyframes animHidePrev {
+    to {
+        opacity: 0;
+        -webkit-transform: translate3d(0,500px,0);
+        transform: translate3d(0,500px,0);
+    }
+}
+
+@-webkit-keyframes animShowPrev {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-500px,0);
+    }
+}
+
+@keyframes animShowPrev {
+    from {
+        opacity: 0;
+        -webkit-transform: translate3d(0,-500px,0);
+        transform: translate3d(0,-500px,0);
+    }
+}
+
+
+/*
+ * Progress bar */
+
+.form-progress {
+	position: absolute;
+	top: 0;
+	width: 0%;
+	height: 0.5em;
+	background: #fffed8;
+	-webkit-transition: width 0.3s ease-in-out;
+	transition: width 0.3s ease-in-out;
+}
+
+
+/*
+ * General input styles */
+
+input,
+textarea,
+select {
+    font-family: 'Museo Sans';
+}
+
+::-webkit-input-placeholder { color: #3F6168; text-shadow: none; }
+:-moz-placeholder { color: #3F6168; opacity: 1; text-shadow: none; }
+::-moz-placeholder { color: #3F6168; opacity: 1; text-shadow: none; }
+:-ms-input-placeholder { color: #3F6168; text-shadow: none; }
