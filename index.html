@@ -155,7 +155,7 @@
                     <h2 class="bottom-margin-50">Send me a note!</h2>
                     <div class="row left-justified">
                         <div class="col col-xs-8 col-xs-offset-1">
-                            <form id="contact" class="form" method="post" action="contact.php">
+                            <form id="contact" class="form" method="post" action="email.php">
                                 <div class="fields">
                                     <div id="name"
                                          class="field field-current top-margin-10"
@@ -197,7 +197,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div class="col col-xs-2 top-padding-20 steps">
+                        <div id="steps" class="col col-xs-2 top-padding-20">
                             <a href="javascript:;"
                                data-field="name"
                                data-order="1"
@@ -223,7 +223,6 @@
                                data-order="2">
                                 Continue
                             </a>
-                            <span class="block-level right-justified"
                         </div>
                     </div>
                 </div>
@@ -313,9 +312,7 @@
             var current = $( '.field-current' ).data( 'order' );
 
             // if we're on the same page as we clicked, do nothing
-            if ( current == order ) {
-                return false;
-            }
+            if ( current == order ) { return false; }
 
             // if we're on submit, do that instead of everything else
             if ( field == 'submit' ) {
@@ -323,45 +320,53 @@
                 var email = $( 'input[name="email"]' ).val();
                 var note = $( 'textarea[name="note"]' ).val();
                 if ( name.length == 0 ) {
-                    $( '#nameError' ).removeClass( 'hide' );
-                    if ( current != 1 ) {
-                        $( '.fields' ).addClass( 'display-prev' ).removeClass( 'display-next' );
-                        setCircle( 'name' );
-                        setAnimations( 'name' );
-                    }
+                    setError( 'name' );
+                    setDirection( 1, 4 );
+                    setCircle( 'name' );
+                    setButton( 1 );
+                    setAnimations( 'name' );
                 } else if ( email.length == 0 || ! validateEmail( email ) ){
-                    $( '.error-msg' ).addClass( 'hide' );
-                    $( '#emailError' ).removeClass( 'hide' );
-                    if ( current != 2 ) {
-                        $( '.fields' ).addClass( 'display-prev' ).removeClass( 'display-next' );
-                        setCircle( 'email' );
-                        setAnimations( 'email' );
-                    }
+                    setError( 'email' );
+                    setDirection( 2, 4 );
+                    setCircle( 'email' );
+                    setButton( 2 );
+                    setAnimations( 'email' );
                 } else if ( note.length == 0 ) {
-                    $( '.error-msg' ).addClass( 'hide' );
-                    $( '#noteError' ).removeClass( 'hide' );
-                    if ( current != 3 ) {
-                        $( '.fields' ).addClass( 'display-prev' ).removeClass( 'display-next' );
-                        setCircle( 'note' );
-                        setAnimations( 'note' );
-                    }
+                    setError( 'note' );
+                    setDirection( 3, 4 );
+                    setCircle( 'note' );
+                    setButton( 3 );
+                    setAnimations( 'note' );
                 } else {
                     $( '.error-msg' ).addClass( 'hide' );
                 }
+                $( '#contact' ).submit();
                 return false;
             }
 
-            // set the direction
+            // set animation direction, circle/button status, and animations
+            setDirection( order, current );
+            setCircle( field );
+            setButton( order );
+            setAnimations( field );
+
+            return false;
+        });
+
+        function setDirection( order, current ){
             if ( order > current ) {
                 $( '.fields' ).addClass( 'display-next' ).removeClass( 'display-prev' );
             } else if ( order < current ) {
                 $( '.fields' ).addClass( 'display-prev' ).removeClass( 'display-next' );
             }
+        }
 
-            // change the circle status
-            setCircle( field );
+        function setCircle( field ){
+            $( '.dot.on' ).removeClass( 'on' );
+            $( '.dot[data-field="'+field+'"]' ).addClass( 'on' );
+        }
 
-            // change the continue button
+        function setButton( order ){
             if ( order == 3 ) {
                 $( '#continue' ).data( 'field', 'submit' ).data( 'order', 4 )
                     .html( 'Submit!' ).addClass( 'submit' );
@@ -372,12 +377,12 @@
                 $( '#continue' ).data( 'field', 'email' ).data( 'order', 2 )
                     .html( 'Continue' ).removeClass( 'submit' );
             }
+        }
 
-            // set the animations
-            setAnimations( field );
-
-            return false;
-        });
+        function setError( field ){
+            $( '.error-msg' ).addClass( 'hide' );
+            $( '#'+field+'Error' ).removeClass( 'hide' );
+        }
 
         function setAnimations( field ){
             $( '.field-hide' ).removeClass( 'field-hide' );
@@ -386,11 +391,6 @@
             setTimeout( function() {
                 $( '.fields' ).removeClass( 'display-next display-prev' );
             }, 1000 );
-        }
-
-        function setCircle( field ){
-            $( '.dot.on' ).removeClass( 'on' );
-            $( '.dot[data-field="'+field+'"]' ).addClass( 'on' );
         }
 
         function validateEmail( email ){
