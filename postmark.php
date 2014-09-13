@@ -17,7 +17,7 @@ class Postmark
         $headers = [
     		'Accept: application/json',
     		'Content-Type: application/json',
-    		'X-Postmark-Server-Token: {$this->api_key}' ];
+    		'X-Postmark-Server-Token: '.$this->api_key ];
     	$data = $this->data;
     	$ch = curl_init( 'http://api.postmarkapp.com/email' );
     	curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
@@ -33,7 +33,9 @@ class Postmark
     	if ( $http_code !== 200 )
         {
     		return false;
-    	} else {
+    	}
+        else
+        {
     		return true;
     	}
     }
@@ -46,7 +48,7 @@ class Postmark
 
     function subject( $subject )
     {
-    	$this->data[ 'subject' ] = $subject;
+    	$this->data[ 'Subject' ] = $subject;
     	return $this;
     }
 

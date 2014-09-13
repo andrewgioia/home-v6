@@ -105,7 +105,9 @@ article {
     &#hi {
         color: #fff;
 
-        h1 { font-size: 42px; }
+        h1 {
+            font-size: 42px;
+        }
         a {
             color: #fff;
             &:hover {
@@ -187,6 +189,7 @@ article {
             /* W3C */
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f8f8f8', endColorstr='#f4f4f4',GradientType=1 );
             /* IE6-8 fallback on horizontal gradient */
+        border-bottom: 1px solid #333;
 
         .project {
 
@@ -216,6 +219,16 @@ article {
                     font-weight: 500;
                     line-height: 1.4em;
                     margin: 10px 0;
+
+                    a {
+                        border-bottom: 1px dotted #fff;
+                        &:hover { border-color: #eee; }
+                    }
+                }
+
+                a {
+                    color: #fff;
+                    &:hover { color: #eee; }
                 }
             }
 
@@ -317,7 +330,7 @@ article {
      * Map */
     &#mp {
         background: #fff;
-        border-top: 4px solid #90B2BC;
+        border-top: 1px solid #444;
     }
 
 }

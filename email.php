@@ -1,31 +1,35 @@
 <?php
 
-// require dependencies
+// dependencies
 //
 require( 'postmark.php' );
-require( 'config.php' );
+require( 'config.local.php' );
 
 // error handling
 //
-function error( $error = FALSE )
+function error( $error = FALSE, &$config )
 {
     if ( $error )
     {
         if ( $error == 'blank' )
         {
-            echo "Something was empty";
+            header( 'Location: '.$config[ 'SITE_URL' ].'/?e=blank#em' );
+            exit;
         }
         else if ( $error == 'email' )
         {
-            echo "The email was invalid";
+            header( 'Location: '.$config[ 'SITE_URL' ].'/?e=email#em' );
+            exit;
         }
         else if ( $error == 'post' )
         {
-            echo "Something was wrong with the post";
+            header( 'Location: '.$config[ 'SITE_URL' ].'/?e=post#em' );
+            exit;
         }
         else if ( $error == 'postmark' )
         {
-            echo "Error with Postmark";
+            header( 'Location: '.$config[ 'SITE_URL' ].'/?e=api#em' );
+            exit;
         }
     }
     return false;
@@ -37,16 +41,19 @@ if ( isset( $_POST[ 'email' ] ) )
 {
     // set email defaults
 
-    $to = "andrewgioia@gmail.com";
-    $subject = "Hey, someone submitted the contact form";
+    $to = $config[ 'TO_EMAIL' ];
+    $subject = "Hey, someone submitted the contact form!";
 
     // check if the post vars are empty
 
     if ( ! isset( $_POST[ 'name' ] )
         || ! isset( $_POST[ 'email' ] )
-        || ! isset( $_POST[ 'note' ] ) )
+        || ! isset( $_POST[ 'note' ] )
+        || strlen( $_POST[ 'name' ] ) == 0
+        || strlen( $_POST[ 'email' ] ) == 0
+        || strlen( $_POST[ 'note' ] ) == 0 )
     {
-        error( 'blank' );
+        error( 'blank', $config );
     }
 
     // set post vars
@@ -60,7 +67,7 @@ if ( isset( $_POST[ 'email' ] ) )
     $exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
     if ( ! preg_match( $exp, $email ) )
     {
-        error( 'email' );
+        error( 'email', $config );
     }
 
     // clean the note
@@ -76,31 +83,28 @@ if ( isset( $_POST[ 'email' ] ) )
     $message .= "Name: ".$name."\n";
     $message .= "Email: ".$email."\n";
     $message .= "Note: ".$note."\n\n";
+    $message .= "You rock!\n\n-Anj";
 
     // set the headers
 
-    $headers = "From: ".$email."\r\n".
+    $headers = "From: ".$to."\r\n".
         "Reply-To: ".$email."\r\n".
         "X-Mailer: PHP/".phpversion();
 
     // send the message
-
-    $postmark = new Postmark( 'your-api-key', $email, $email );
-    if ( $postmark->to( 'andrewgioia@gmail.com' )
-            ->subject( $subject )
-            ->html_message( $message )
-            ->send() )
+    $postmark = new Postmark( $config[ 'API_KEY' ], $to, $email );
+    if ( $postmark->to( $to )->subject( $subject )->plain_message( $message )->send() )
     {
-        echo "Message sent";
+        header( 'Location: '.$config[ 'SITE_URL' ].'/?s=thanks' );
     }
     else
     {
-        error( 'postmark' );
+        error( 'postmark', $config );
     }
 
 }
 else
 {
-    error( 'post' );
+    error( 'post', $config );
 
 }

@@ -1,3 +1,12 @@
+<?php   if ( isset( $_GET[ 's' ] ) ): ?>
+<?php       $alert = "success"; ?>
+<?php   elseif ( isset( $_GET[ 'e' ] ) ): ?>
+<?php       $alert = "error"; ?>
+<?php       if ( $_GET[ 'e' ] == 'blank' ) $msg = 'Please make sure all fields are filled out!'; ?>
+<?php       if ( $_GET[ 'e' ] == 'email' ) $msg = 'The address you entered isn\'t an email address...'; ?>
+<?php       if ( $_GET[ 'e' ] == 'post' ) $msg =  'Please use the submit button on the form!'; ?>
+<?php       if ( $_GET[ 'e' ] == 'api' ) $msg =  'Sorry there was an issue with Postmark, try again?'; ?>
+<?php   endif; ?>
 <!DOCTYPE html>
 <html class="no-js">
 <head>
@@ -58,6 +67,13 @@
         <!-- Welcome -->
         <article id="hi">
             <div class="inner">
+<?php   if ( isset( $alert ) && $alert == 'success' ): ?>
+                <div id="post-msg" class="success fadeout">
+                    <div class="notif">Thank you for your note! I\'ll get back to you asap.</div>
+                </div>
+<?php   endif; ?>
+
+                </script>
                 <h1>Andrew Gioia</h1>
                 <p class="no-bottom-margin">Co-founder of TeachBoost</p>
                 <p class="no-top-margin bottom-margin-20">Philadephia, PA</p>
@@ -125,22 +141,24 @@
                                 <i class="fa fa-moon-o"></i>
                                 <h2 class="no-margin no-padding">Bedtime</h2>
                                 <p>A daily journal that isn't a chore. iOS app for memorializing your day in an easy, fun way.</p>
-                                <p>A daily journal that isn't a chore. iOS app for memorializing your day in an easy, fun way.</p>
+                                <p>Currently being developed as an experiment and tutorial in learning <a href="https://developer.apple.com/swift/">Swift</a>, in the store soon!</p>
                             </div>
                         </div>
                         <div class="col-sm-4 project">
                             <div class="info two">
                                 <i class="fa fa-lightbulb-o"></i>
-                                <h2 class="no-margin no-padding">Canopy</h2>
+                                <h2 class="no-margin no-padding">
+                                    <a href="https://github.com/andrewgioia/canopy">Canopy</a>
+                                </h2>
                                 <p>Home energy data visualization and reporting app&mdash;import energy data to make better decisions.<p>
-                                <p>Home energy data visualization and reporting app&mdash;import energy data to make better decisions. app&mdash;import energy data to make better decisions<p>
+                                <p>Built around the GreenButton data standard used by PECO and other utility companies, this PHP app provides some nice charts to view how your home uses electricity.<p>
                             </div>
                         </div>
                         <div class="col-sm-4 project">
                             <div class="info three">
                                 <i class="fa fa-flask"></i>
                                 <h2 class="no-margin no-padding">Particle Bits</h2>
-                                <p>Soon-to-be blog on web development, design, technology, and internet thoughts.</p>
+                                <p>Budding blog with Mike on web development, design, technology, and internet thoughts. </p>
                             </div>
                         </div>
                     </div>
@@ -152,6 +170,12 @@
         <article id="em">
             <div class="inner">
                 <div class="container-fluid">
+<?php   if ( isset( $alert ) && $alert == 'error' ): ?>
+                <div id="post-msg" class="error fadeout">
+                    <div class="error notif"><?php echo $msg; ?></div>
+                </div>
+<?php   endif; ?>
+
                     <h2 class="bottom-margin-50">Send me a note!</h2>
                     <div class="row left-justified">
                         <div class="col col-xs-8 col-xs-offset-1">
@@ -339,8 +363,8 @@
                     setAnimations( 'note' );
                 } else {
                     $( '.error-msg' ).addClass( 'hide' );
+                    $( '#contact' ).submit();
                 }
-                $( '#contact' ).submit();
                 return false;
             }
 
@@ -410,7 +434,7 @@
                 scrollwheel: false,
                 center: myLatlng
             }
-            var contentString = '<div style="width:220px;height:80px;padding:10px 0 10px 25px;text-align:center;"><h3>Hi there!</h3><p style="font-size:16px;margin:10px 0 0;"><a href="mailto:hi@andrewgioia.com">Say hi back</a></p></div>';
+            var contentString = '<div style="width:220px;height:80px;padding:10px 0 10px 25px;text-align:center;"><h3>Hi there!</h3><p style="font-size:16px;margin:10px 0 0;"><a href="#em">Say hi back</a></p></div>';
             var infowindow = new google.maps.InfoWindow({
                 content: contentString
             });
