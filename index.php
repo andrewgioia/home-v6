@@ -21,8 +21,7 @@
     <link rel="stylesheet" type="text/css" href="public/css/supersized.css" />
     <link rel="stylesheet" type="text/css" href="public/css/jquery-ui.css" />
     <link rel="stylesheet" type="text/css" href="public/css/andrew.css" />
-    <link rel="shortcut icon" href="http://lorien.local/athena/favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" href="http://lorien.local/athena/favicon@2x.png" sizes="32x32" />
+    <link rel="icon" href="favicon.ico" type="image/png" />
     <!--[if lt IE 9]>
         <script src="public/js/vendor/html5shiv.js" type="text/javascript"></script>
     <![endif]-->
@@ -69,7 +68,7 @@
             <div class="inner">
 <?php   if ( isset( $alert ) && $alert == 'success' ): ?>
                 <div id="post-msg" class="success fadeout">
-                    <div class="notif">Thank you for your note! I\'ll get back to you asap.</div>
+                    <div class="notif">Thank you for your note! I'll get back to you asap.</div>
                 </div>
 <?php   endif; ?>
 
