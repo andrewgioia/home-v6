@@ -26,6 +26,11 @@ function error( $error = FALSE, &$config )
             header( 'Location: '.$config[ 'SITE_URL' ].'/?e=post#em' );
             exit;
         }
+        else if ( $error == 'human' )
+        {
+            header( 'Location: '.$config[ 'SITE_URL' ].'/?e=human#em' );
+            exit;
+        }
         else if ( $error == 'postmark' )
         {
             header( 'Location: '.$config[ 'SITE_URL' ].'/?e=api#em' );
@@ -49,9 +54,11 @@ if ( isset( $_POST[ 'email' ] ) )
     if ( ! isset( $_POST[ 'name' ] )
         || ! isset( $_POST[ 'email' ] )
         || ! isset( $_POST[ 'note' ] )
+        || ! isset( $_POST[ 'human' ] )
         || strlen( $_POST[ 'name' ] ) == 0
         || strlen( $_POST[ 'email' ] ) == 0
-        || strlen( $_POST[ 'note' ] ) == 0 )
+        || strlen( $_POST[ 'note' ] ) == 0
+        || strlen( $_POST[ 'human' ] ) == 0 )
     {
         error( 'blank', $config );
     }
@@ -61,6 +68,14 @@ if ( isset( $_POST[ 'email' ] ) )
     $name = $_POST[ 'name' ];
     $email = $_POST[ 'email' ];
     $note = $_POST[ 'note' ];
+    $human = $_POST[ 'human' ];
+
+    // check if we have a human first
+
+    if ( $human != 'blue' )
+    {
+        error( 'human', $config );
+    }
 
     // validate the email
 

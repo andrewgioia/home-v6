@@ -5,6 +5,7 @@
 <?php       if ( $_GET[ 'e' ] == 'blank' ) $msg = 'Please make sure all fields are filled out!'; ?>
 <?php       if ( $_GET[ 'e' ] == 'email' ) $msg = 'The address you entered isn\'t an email address...'; ?>
 <?php       if ( $_GET[ 'e' ] == 'post' ) $msg =  'Please use the submit button on the form!'; ?>
+<?php       if ( $_GET[ 'e' ] == 'human' ) $msg =  'It looks like you\'re a robot... please... no more.'; ?>
 <?php       if ( $_GET[ 'e' ] == 'api' ) $msg =  'Sorry there was an issue with Postmark, try again?'; ?>
 <?php   endif; ?>
 <!DOCTYPE html>
@@ -137,10 +138,12 @@
                     <div class="row left-margin-10 right-margin-10">
                         <div class="col-sm-4 project">
                             <div class="info one">
-                                <i class="fa fa-moon-o"></i>
-                                <h2 class="no-margin no-padding">Bedtime</h2>
-                                <p>A daily journal that isn't a chore. iOS app for memorializing your day in an easy, fun way.</p>
-                                <p>Currently being developed as an experiment and tutorial in learning <a href="https://developer.apple.com/swift/">Swift</a>, in the store soon!</p>
+                                <i class="icon coffeebean"></i>
+                                <h2 class="no-margin no-padding">
+                                    <a href="https://itunes.apple.com/us/app/coffeebean/id934226885?ls=1&mt=12">Coffeebean</a>
+                                </h2>
+                                <p>Small OSX menubar app that lets you temporarily disable automatic sleep, dimming, and screensavers.</p>
+                                <p>First foray into Swift, and you can download it now in the <a href="https://itunes.apple.com/us/app/coffeebean/id934226885?ls=1&mt=12">Mac App Store</a> now!</p>
                             </div>
                         </div>
                         <div class="col-sm-4 project">
@@ -217,6 +220,18 @@
                                             Please enter a message, come on now!
                                         </div>
                                     </div>
+                                    <div id="human"
+                                         class="field top-margin-10"
+                                         data-order="4">
+                                        <h3 class="bottom-margin-30 anim-upper">Too many robots online, what color is the sky?</h3>
+                                        <input type="text"
+                                               name="human"
+                                               placeholder="hint: blue"
+                                               class="bigfield anim-lower" />
+                                        <div id="humanError" class="hide error-msg anim-lower">
+                                            You didn't answer the human question correctly.
+                                        </div>
+                                    </div>
                                 </div>
                             </form>
                         </div>
@@ -236,6 +251,12 @@
                             <a href="javascript:;"
                                data-field="note"
                                data-order="3"
+                               class="step-link dot block-level right-padding-20 bottom-padding-5">
+                                <i class="fa fa-circle"></i>
+                            </a>
+                            <a href="javascript:;"
+                               data-field="human"
+                               data-order="4"
                                class="step-link dot block-level right-padding-20 bottom-padding-15">
                                 <i class="fa fa-circle"></i>
                             </a>
@@ -342,24 +363,31 @@
                 var name = $( 'input[name="name"]' ).val();
                 var email = $( 'input[name="email"]' ).val();
                 var note = $( 'textarea[name="note"]' ).val();
+                var human = $( 'input[name="human"]' ).val();
                 if ( name.length == 0 ) {
                     setError( 'name' );
-                    setDirection( 1, 4 );
+                    setDirection( 1, 5 );
                     setCircle( 'name' );
                     setButton( 1 );
                     setAnimations( 'name' );
                 } else if ( email.length == 0 || ! validateEmail( email ) ){
                     setError( 'email' );
-                    setDirection( 2, 4 );
+                    setDirection( 2, 5 );
                     setCircle( 'email' );
                     setButton( 2 );
                     setAnimations( 'email' );
                 } else if ( note.length == 0 ) {
                     setError( 'note' );
-                    setDirection( 3, 4 );
+                    setDirection( 3, 5 );
                     setCircle( 'note' );
                     setButton( 3 );
                     setAnimations( 'note' );
+                } else if ( human.length == 0 || human != 'blue' ) {
+                    setError( 'human' );
+                    setDirection( 4, 5 );
+                    setCircle( 'human' );
+                    setButton( 4 );
+                    setAnimations( 'human' );
                 } else {
                     $( '.error-msg' ).addClass( 'hide' );
                     $( '#contact' ).submit();
@@ -390,9 +418,12 @@
         }
 
         function setButton( order ){
-            if ( order == 3 ) {
-                $( '#continue' ).data( 'field', 'submit' ).data( 'order', 4 )
+            if ( order == 4 ) {
+                $( '#continue' ).data( 'field', 'submit' ).data( 'order', 5 )
                     .html( 'Submit!' ).addClass( 'submit' );
+            } else if ( order == 3 ) {
+                $( '#continue' ).data( 'field', 'human' ).data( 'order', 4 )
+                    .html( 'Continue' ).removeClass( 'submit' );
             } else if ( order == 2 ) {
                 $( '#continue' ).data( 'field', 'note' ).data( 'order', 3 )
                     .html( 'Continue' ).removeClass( 'submit' );
