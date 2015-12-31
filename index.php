@@ -287,7 +287,7 @@
                         <br />
                         &copy; 2014 Andrew Gioia &amp; friends. Made with &nbsp;&#9829;&nbsp; in Philadelphia, PA.
                         <br />
-                        <em>As iron sharpens iron, so one person sharpens another.</em> &mdash;Proverbs 27:17
+                        <em>As iron sharpens iron, so one man sharpens another.</em> &mdash;Proverbs 27:17
                     </div>
                 </div>
             </div>
