@@ -19,8 +19,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
     <link rel="stylesheet" type="text/css" href="public/css/font-awesome.min.css" />
-    <link rel="stylesheet" type="text/css" href="public/css/supersized.css" />
     <link rel="stylesheet" type="text/css" href="public/css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Open+Sans" />
+    <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Asar" />
     <link rel="stylesheet" type="text/css" href="public/css/andrew.css" />
     <link rel="icon" href="favicon.ico" type="image/png" />
     <!--[if lt IE 9]>
@@ -42,7 +43,6 @@
                             <a href="#me" class="item">Biography</a>
                             <a href="#pj" class="item">Projects</a>
                             <a href="#em" class="item">Contact Me</a>
-                            <a href="#mp" class="item">Find Me</a>
                             <a href="#hi" class="item top-1">
                                 <i class="fa fa-rocket"></i>
                             </a>
@@ -73,15 +73,14 @@
                 </div>
 <?php   endif; ?>
 
-                </script>
                 <h1>Andrew Gioia</h1>
-                <p class="no-bottom-margin">Co-founder of TeachBoost</p>
-                <p class="no-top-margin bottom-margin-20">Philadephia, PA</p>
-                <p>
+                <p class="no-bottom-margin bold-weight serif-font font-size-21">Co-founder of TeachBoost</p>
+                <p class="no-top-margin bottom-margin-20 font-size-19">Philadephia, PA</p>
+                <p class="font-size-17">
                     Technologist, lawyer, and amateur craftsman.<br />
                     I'm passionate about clean design and simple living.
                 </p>
-                <p class="top-margin-40">
+                <div class="top-margin-40 bottom-padding-40">
                     <a href="mailto:hi@andrewgioia.com" class="right-margin-15">
                         <i class="fa fa-envelope-o"></i>
                     </a>
@@ -94,75 +93,96 @@
                     <a href="https://github.com/andrewgioia" class="right-margin-15">
                         <i class="fa fa-github"></i>
                     </a>
-                    <a href="http://linkedin.com/in/andrewgioia">
+                    <a href="http://linkedin.com/in/andrewgioia" class="right-margin-15">
                         <i class="fa fa-linkedin"></i>
                     </a>
-                </p>
+                    <a href="https://www.flickr.com/photos/andrewgioia/">
+                        <i class="fa fa-flickr"></i>
+                    </a>
+                </div>
             </div>
         </article>
 
         <!-- About -->
         <article id="me">
-            <div class="inner">
-                <div class="container-fluid">
-                    <div class="andrew avatar"></div>
-                    <div class="row">
-                        <div class="col-xs-10 col-xs-offset-1
-                                    col-sm-5 col-sm-offset-1
-                                    left-justified">
-                            <p class="first">
-                                A few years ago I started an educational technology company called <a href="http://teachboost.com">TeachBoost</a> with my brother, <a href="http://mikegioia.com">Mike</a>, and friend, <a href="http://jason.deroner.com">Jason</a>. We make web-based productivity and reporting tools for K-12 schools so that they can leverage their professional development into something wonderful for their educators and students. I maintain the brand and front-end design of the app and run the operations-side of things.
-                            </p>
-                        </div>
-                        <div class="col-xs-10 col-xs-offset-1
-                                    col-sm-5 col-sm-offset-0
-                                    left-justified">
-                            <p>
-                                Prior to TeachBoost I was an attorney for two years at a law firm in Philadelphia. I graduated from the University of Michigan Law School in 2010 and Cornell University in 2007. In my free time I enjoy building data-visualization tools, tinkering with our growing home automation setup, learning carpentry and woodworking, and spending as much time as possible with my beautiful girlfriend, Beth, and our dog, Gus.
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-xs-10 col-xs-offset-1
+                                col-sm-6 col-sm-offset-1">
+                        <h1 class="no-margin">
+                            A Brief History.
+                        </h1>
+                        <h2 class="top-margin-20 bottom-padding-20">
+                            Just a bit about me and what I do.
+                        </h2>
+                        <p>
+                            A few years ago I started an educational technology company called <a href="http://teachboost.com">TeachBoost</a> with my brother, <a href="http://mikegioia.com">Mike</a>, and friend, <a href="http://jason.deroner.com">Jason</a>. We make web-based productivity and reporting tools for K-12 schools so that they can leverage their professional development into something wonderful for their educators and students. Day to day I now manage our customer engagement, maintain the brand and front-end design of the app, and run the operations-side of things.
+                        </p>
+                        <p>
+                            Prior to TeachBoost I was an attorney for two years at a <a href="http://rubinfortunato.com">law firm</a> in Philadelphia. I graduated from the University of Michigan Law School in 2010 and Cornell University in 2007. I grew up outside Philadelphia and currently love living near the art museum.
+                        </p>
+                        <p>
+                            In my free time I enjoy building data-visualization tools, tinkering with our growing home automation setup, <a href="http://aisphila.org">learning Italian</a> and woodworking, and spending as much time as possible with my beautiful wife, Beth, and our dog, Maggie.
+                        </p>
+                        <p>
+                            Take a look below for some of the things I work(ed) on and don't hesitate to <a href="#hi">say hi</a>!
+                        </p>
+                    </div>
+                    <div class="col-xs-10 col-xs-offset-1
+                                col-sm-3 col-sm-offset-1">
+                        <div class="centered-text" style="width: 200px;">
+                            <img src="public/img/andrew/hedcut-v1.png" width="200" />
+                            <p class="no-margin top-padding-10 font-size-15 line-height-1-4">
+                                <em>Andrew Gioia</em>, 2015
+                                <br />
+                                Also in <a href="http://facebook.com/andrewgioia">full color</a>!
                             </p>
                         </div>
                     </div>
                 </div>
-                <div id="colors"></div>
             </div>
         </article>
 
         <!-- Projects -->
         <article id="pj">
-            <div class="inner">
-                <div class="container-fluid">
-                    <div class="code avatar">
-                        <i class="fa fa-desktop back"></i>
-                        <i class="fa fa-mobile front"></i>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-10 col-sm-offset-1
+                                centered-text">
+                        <h1>Projects and Other Work</h1>
                     </div>
-                    <div class="row left-margin-10 right-margin-10">
-                        <div class="col-sm-4 project">
-                            <div class="info one">
-                                <i class="icon coffeebean"></i>
-                                <h2 class="no-margin no-padding">
-                                    <a href="https://itunes.apple.com/us/app/coffeebean/id934226885?ls=1&mt=12">Coffeebean</a>
-                                </h2>
-                                <p>Small OSX menubar app that lets you temporarily disable automatic sleep, dimming, and screensavers.</p>
-                                <p>First foray into Swift, and you can download it now in the <a href="https://itunes.apple.com/us/app/coffeebean/id934226885?ls=1&mt=12">Mac App Store</a> now!</p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 project">
-                            <div class="info two">
-                                <i class="fa fa-lightbulb-o"></i>
-                                <h2 class="no-margin no-padding">
-                                    <a href="https://github.com/andrewgioia/canopy">Canopy</a>
-                                </h2>
-                                <p>Home energy data visualization and reporting app&mdash;import energy data to make better decisions.<p>
-                                <p>Built around the GreenButton data standard used by PECO and other utility companies, this PHP app provides some nice charts to view how your home uses electricity.<p>
-                            </div>
-                        </div>
-                        <div class="col-sm-4 project">
-                            <div class="info three">
-                                <i class="fa fa-flask"></i>
-                                <h2 class="no-margin no-padding">Particle Bits</h2>
-                                <p>Budding blog with Mike on web development, design, technology, and internet thoughts. </p>
-                            </div>
-                        </div>
+                    <div class="col-sm-8 col-sm-offset-2
+                                centered-text top-padding-10">
+                        <h2>Apps and Software Projects</h2>
+                        <ol class="projects left-justified">
+                            <li>
+                                <a href="https://github.com/andrewgioia/EchoPHP" class="title-font no-border">EchoPHP</a>&mdash;Basic PHP wrapper for the <a href="http://echomtg.com">EchoMTG</a> API, a service to manage card collections/inventory and view pricing history. <em>PHP</em>.
+                            </li>
+                            <li>
+                                <a href="https://andrewgioia.github.io/Keyrune" class="title-font no-border">Keyrune</a>&mdash;Magic: the Gathering pictographic font for <strong>card set and rarity</strong> symbols. <em>CSS, Design</em>.
+                            </li>
+                            <li>
+                                <a href="https://github.com/andrewgioia/Mana" class="title-font no-border">Mana</a>&mdash;Magic: the Gathering pictographic font for <strong>mana, tap, and casting cost</strong> symbols. <em>CSS, Design</em>.
+                            </li>
+                            <li>
+                                <a href="https://itunes.apple.com/us/app/coffeebean/id934226885?ls=1&mt=12" class="title-font no-border">Coffeebean</a>&mdash;small <strong>OSX menubar app</strong> to temporarily disable automatic sleep, dimming, and screensavers. <em>Swift</em>.
+                            </li>
+                            <li>
+                                <a href="https://github.com/andrewgioia/canopy" class="title-font no-border">Canopy</a>&mdash;home <strong>energy data visualization</strong> and reporting app built around the GreenButton data standard, to view how your home uses electricity. <em>PHP, Javascript</em>.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-8 col-sm-offset-2
+                                centered-text top-padding-10">
+                        <h2>Writing</h2>
+                        <ol class="projects left-justified">
+                            <li>
+                                <a href="http://particlebits.com" class="title-font no-border">Particle Bits</a>&mdash;budding blog with Mike on web development, design, technology, and internet thoughts.
+                            </li>
+                            <li>
+                                <a href="http://www.mttlr.org/wp-content/journal/volfifteen/gioia.pdf" class="title-font no-border">FCC Jurisdiction Over ISPs in Protocol-Specific Bandwidth Throttling</a>&mdash;note published in Michigan Telecommunications and Technology Law Review (Spring 2009) on the FCC's legal grounds to enforce net neutrality.
+                            </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -178,7 +198,9 @@
                 </div>
 <?php   endif; ?>
 
-                    <h2 class="bottom-margin-50">Send me a note!</h2>
+                    <h2 class="bottom-margin-50 centered-text">
+                        Send me a note!
+                    </h2>
                     <div class="row left-justified">
                         <div class="col col-xs-8 col-xs-offset-1">
                             <form id="contact" class="form" method="post" action="email.php">
@@ -186,7 +208,7 @@
                                     <div id="name"
                                          class="field field-current top-margin-10"
                                          data-order="1">
-                                        <h3 class="bottom-margin-30 anim-upper">What is your name?</h3>
+                                        <h3 class="bottom-margin-30 anim-upper sans-font">What is your name?</h3>
                                         <input type="text"
                                                name="name"
                                                placeholder="Andrew Gioia"
@@ -198,7 +220,7 @@
                                     <div id="email"
                                          class="field top-margin-10"
                                          data-order="2">
-                                        <h3 class="bottom-margin-30 anim-upper">What is your email address?</h3>
+                                        <h3 class="bottom-margin-30 anim-upper sans-font">What is your email address?</h3>
                                         <input type="text"
                                                name="email"
                                                placeholder="hi@andrewgioia.com"
@@ -210,7 +232,7 @@
                                     <div id="note"
                                          class="field top-margin-10"
                                          data-order="3">
-                                        <h3 class="bottom-margin-30 anim-upper">What can I do for you?</h3>
+                                        <h3 class="bottom-margin-30 anim-upper sans-font">What can I do for you?</h3>
                                         <textarea name="note"
                                                placeholder="Something's been on my mind a lot lately and I..."
                                                class="bigfield anim-lower"
@@ -223,7 +245,7 @@
                                     <div id="human"
                                          class="field top-margin-10"
                                          data-order="4">
-                                        <h3 class="bottom-margin-30 anim-upper">Too many robots online, what color is the sky?</h3>
+                                        <h3 class="bottom-margin-30 anim-upper sans-font">Too many robots online, what color is the sky?</h3>
                                         <input type="text"
                                                name="human"
                                                placeholder="hint: blue"
@@ -273,21 +295,22 @@
             </div>
         </article>
 
-        <!-- Map -->
-        <article id="mp">
-            <div id="map" style="width: 100%; height: 100%;"></div>
-        </article>
-
         <!-- Footer -->
         <footer>
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <a href="#me">Biography</a> / <a href="#pj">Projects</a> / <a href="#em">Contact me</a> / <a href="#mp">Find me</a>
-                        <br />
-                        &copy; 2014 Andrew Gioia &amp; friends. Made with &nbsp;&#9829;&nbsp; in Philadelphia, PA.
-                        <br />
-                        <em>As iron sharpens iron, so one man sharpens another.</em> &mdash;Proverbs 27:17
+                    <div class="col-sm-10 col-sm-offset-1">
+                        <p>
+                            <a href="#me">Biography</a> &middot;
+                            <a href="#pj">Projects</a> &middot;
+                            <a href="#em">Contact form</a> or email hi@andrewgioia.com.
+                        </p>
+                        <p>
+                            Layout, content, and graphics &copy; 2016 Andrew Gioia &amp; friends. <br />Any opinions expressed here are my own personal opinions and do not represent my employer’s view in any way.
+                        </p>
+                        <p>
+                            Made with ❤️ in Philadelphia, PA.
+                        </p>
                     </div>
                 </div>
             </div>
@@ -301,29 +324,6 @@
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
     <script>!window.jQuery.ui && document.write('<script src="public/js/jquery-ui.min.js"><\/script>')</script>
     <script src="public/js/jquery.scrollTo.min.js"></script>
-
-    <!-- Plugins -->
-    <script src="public/js/supersized.min.js"></script>
-
-    <!-- Background transitions -->
-    <script>
-        jQuery( function($) {
-            $.supersized({
-                // Functionality
-                slide_interval   : 0,
-                transition       : 1,
-                transition_speed : 15000,
-                // Components
-                slide_links      : 'blank',
-                slides           : [
-                    {image : 'public/img/backgrounds/gazebo.blur.jpg', title : '', thumb : '', url : ''},
-                    {image : 'public/img/backgrounds/museum.blur.jpg', title : '', thumb : '', url : ''},
-                    {image : 'public/img/backgrounds/street.blur.jpg', title : '', thumb : '', url : ''}
-                                   ]
-
-            });
-        });
-    </script>
 
     <!-- Scroll header effect -->
     <script>
@@ -452,34 +452,6 @@
             return re.test( email );
         }
 
-    </script>
-
-    <!-- Map -->
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
-    <script>
-        function initialize() {
-            var myLatlng = new google.maps.LatLng( 39.96557, -75.180966 );
-            var mapOptions = {
-                zoom: 12,
-                scrollwheel: false,
-                center: myLatlng
-            }
-            var contentString = '<div style="width:220px;height:80px;padding:10px 0 10px 25px;text-align:center;"><h3>Hi there!</h3><p style="font-size:16px;margin:10px 0 0;"><a href="#em">Say hi back</a></p></div>';
-            var infowindow = new google.maps.InfoWindow({
-                content: contentString
-            });
-            var map = new google.maps.Map( document.getElementById( 'map' ), mapOptions );
-            var marker = new google.maps.Marker({
-                position: myLatlng,
-                map: map,
-                title: 'Welcome!'
-            });
-            infowindow.open(map,marker);
-            google.maps.event.addListener(marker, 'click', function() {
-
-            });
-        }
-        google.maps.event.addDomListener(window, 'load', initialize);
     </script>
 
     <!-- Hamburger menu -->

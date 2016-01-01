@@ -2,35 +2,15 @@
  * Fonts */
 
 @font-face {
-    font-family: 'Museo Sans';
+    font-family: 'b-s-b';
     font-style: normal;
     font-weight: 300;
-    src: local( 'Museo Sans' ),
-         url( '../fonts/museosans-webfont.eot' ) format( 'embedded-opentype' ),
-         url( '../fonts/museosans-webfont.woff' ) format( 'woff' ),
-         url( '../fonts/museosans-webfont.ttf' ) format( 'truetype' ),
-         url( '../fonts/museosans-webfont.svg' ) format( 'svg' );
-}
-
-@font-face {
-    font-family: 'Museo';
-    font-style: normal;
-    font-weight: 500;
-    src: local( 'Museo' ),
-         url( '../fonts/museo300-webfont.eot' ) format( 'embedded-opentype' ),
-         url( '../fonts/museo300-webfont.woff' ) format( 'woff' ),
-         url( '../fonts/museo300-webfont.ttf' ) format( 'truetype' ),
-         url( '../fonts/museo300-webfont.svg' ) format( 'svg' );
-}
-
-@font-face {
-    font-family: 'Museo Slab';
-    font-style: normal;
-    src: local( 'Museo Slab' ),
-         url( '../fonts/museoslab-webfont.eot' ) format( 'embedded-opentype' ),
-         url( '../fonts/museoslab-webfont.woff' ) format( 'woff' ),
-         url( '../fonts/museoslab-webfont.ttf' ) format( 'truetype' ),
-         url( '../fonts/museoslab-webfont.svg' ) format( 'svg' );
+    src: url( '../fonts/b-s-b-webfont.eot' );
+    src: url( '../fonts/b-s-b-webfont.eot?#iefix' ) format( 'embedded-opentype' ),
+         url( '../fonts/b-s-b-webfont.woff2' ) format( 'woff2' ),
+         url( '../fonts/b-s-b-webfont.woff' ) format( 'woff' ),
+         url( '../fonts/b-s-b-webfont.ttf' ) format( 'truetype' ),
+         url( '../fonts/b-s-b-webfont.svg#bsb' ) format( 'svg' );
 }
 
 
@@ -45,7 +25,7 @@ h1 {
 
 h2 {
     color: #444;
-    font-size: 24px;
+    font-size: 28px;
     font-weight: 500;
     line-height: 1.0em;
     margin: 30px 0 15px;
@@ -59,10 +39,6 @@ p {
     line-height: 1.6em;
     margin: 15px 0;
 }
-
-
-/*
- * Quotes */
 
 blockquote,
 pre {
@@ -84,54 +60,36 @@ pre {
     }
 }
 
-/*
- * Font families */
-
-.serif-font { font-family: Arial; }
-.sans-font { font-family: Arial; }
-
 
 /*
- * Font weights */
+ * Text control */
+
+.title-font { font-family: 'b-s-b', serif; }
+.serif-font { font-family: Asar, Georgia, Garamond, serif; }
+.sans-font { font-family: 'Open Sans', sans-serif; }
 
 .bold-weight { font-weight: bold !important; }
 .italic-weight { font-style: italic !important; }
 .normal-weight { font-weight: normal !important; }
 
-
-/*
- * Font styles */
-
 .uppercase { text-transform: uppercase; }
 .normal-style { font-style: normal; }
-
-
-/*
- * Text alignment */
 
 .centered-text { text-align: center; }
 .left-justified { text-align: left; }
 .right-justified { text-align: right; }
 
+.font-size-11 { font-size: 11px !important; }
+.font-size-13 { font-size: 13px !important; }
+.font-size-15 { font-size: 15px !important; }
+.font-size-17 { font-size: 17px !important; }
+.font-size-18 { font-size: 18px !important; }
+.font-size-21 { font-size: 21px !important; }
 
-/*
- * Font sizes */
-
-.font-size-11 { font-size: 11px; }
-.font-size-13 { font-size: 13px; }
-.font-size-15 { font-size: 15px; }
-.font-size-17 { font-size: 17px; }
-.font-size-18 { font-size: 18px; }
-.font-size-21 { font-size: 21px; }
-
-
-/*
- * Line heights */
-
-.line-height-1-0 { line-height: 1.0em; }
-.line-height-1-3 { line-height: 1.3em; }
-.line-height-1-4 { line-height: 1.4em; }
-.line-height-1-5 { line-height: 1.5em; }
-.line-height-1-6 { line-height: 1.6em; }
-.line-height-1-7 { line-height: 1.7em; }
-.line-height-1-8 { line-height: 1.8em; }
+.line-height-1-0 { line-height: 1.0em !important; }
+.line-height-1-3 { line-height: 1.3em !important; }
+.line-height-1-4 { line-height: 1.4em !important; }
+.line-height-1-5 { line-height: 1.5em !important; }
+.line-height-1-6 { line-height: 1.6em !important; }
+.line-height-1-7 { line-height: 1.7em !important; }
+.line-height-1-8 { line-height: 1.8em !important; }
