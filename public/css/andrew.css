@@ -199,6 +199,13 @@ header h1 {
   top: -50px;
   transition: top 0.10s ease;
 }
+header h1 a {
+  border: none;
+  color: #383838;
+}
+header h1 a:hover {
+  border: none;
+}
 header aside {
   float: right;
   padding: 0 15px 0 5px;

@@ -43,13 +43,15 @@
         <div class="container-fluid">
             <div class="row">
                 <div class="col-sm-12">
-                    <h1>Andrew Gioia</h1>
+                    <h1>
+                        <a href="#hi" class="self">Andrew Gioia</a>
+                    </h1>
                     <menu class="navigation">
                         <div class="inner">
-                            <a href="#me" class="item">Biography</a>
-                            <a href="#pj" class="item">Projects</a>
-                            <a href="#em" class="item">Contact Me</a>
-                            <a href="#hi" class="item top-1">
+                            <a href="#me" class="item self">Biography</a>
+                            <a href="#pj" class="item self">Projects</a>
+                            <a href="#em" class="item self">Contact Me</a>
+                            <a href="#hi" class="item self top-1">
                                 <i class="fa fa-rocket"></i>
                             </a>
                         </div>
@@ -131,7 +133,7 @@
                             In my free time I enjoy building data-visualization tools, tinkering with our growing home automation setup, <a href="http://aisphila.org">learning Italian</a> and woodworking, and spending as much time as possible with my beautiful wife, Beth, and our dog, Maggie.
                         </p>
                         <p>
-                            Take a look below for some of the things I work(ed) on and don't hesitate to <a href="#hi">say hi</a>!
+                            Take a look below for some of the things I work(ed) on and don't hesitate to <a href="#em" class="self">say hi</a>!
                         </p>
                     </div>
                     <div class="col-xs-10 col-xs-offset-1
@@ -345,7 +347,7 @@
 
     <!-- Naviation scrolling -->
     <script>
-        $( 'menu .item' ).on( 'click', function() {
+        $( '.self' ).on( 'click', function() {
             var id = $( this ).attr( 'href' );
             $.scrollTo( id, 1000, {easing:'easeInOutQuart'} );
             return false;
