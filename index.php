@@ -1,3 +1,9 @@
+<?php   if ( file_exists( 'config.local.php' ) ): ?>
+<?php       include( 'config.local.php' ); ?>
+<?php   else: ?>
+<?php       $config[ 'SITE_URL' ] = ''; ?>
+<?php   endif; ?>
+
 <?php   if ( isset( $_GET[ 's' ] ) ): ?>
 <?php       $alert = "success"; ?>
 <?php   elseif ( isset( $_GET[ 'e' ] ) ): ?>
@@ -14,7 +20,7 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Andrew Gioia</title>
-    <base href="http://lorien.local/andrew/" />
+    <base href="<?php echo $config[ 'SITE_URL' ]; ?>" />
     <meta name="description" content="Co-founder of TeachBoost, technologist, and home brewer." />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" type="text/css" href="public/css/bootstrap.min.css" />
