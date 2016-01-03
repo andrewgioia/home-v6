@@ -74,39 +74,41 @@
 
         <!-- Welcome -->
         <article id="hi">
-            <div class="inner">
+            <div class="inner row">
+                <div class="col col-xs-10 col-xs-offset-1 centered-text">
 <?php   if ( isset( $alert ) && $alert == 'success' ): ?>
-                <div id="post-msg" class="success fadeout">
-                    <div class="notif">Thank you for your note! I'll get back to you asap.</div>
-                </div>
+                    <div id="post-msg" class="success fadeout">
+                        <div class="notif">Thank you for your note! I'll get back to you asap.</div>
+                    </div>
 <?php   endif; ?>
 
-                <h1>Andrew Gioia</h1>
-                <p class="no-bottom-margin bold-weight serif-font font-size-21">Co-founder of TeachBoost</p>
-                <p class="no-top-margin bottom-margin-20 font-size-19">Philadephia, PA</p>
-                <p class="font-size-17">
-                    Technologist, lawyer, and amateur craftsman.<br />
-                    I'm passionate about clean design and simple living.
-                </p>
-                <div class="top-margin-40 bottom-padding-40">
-                    <a href="mailto:hi@andrewgioia.com" class="right-margin-15">
-                        <i class="fa fa-envelope-o"></i>
-                    </a>
-                    <a href="http://twitter.com/andrewgioia" class="right-margin-15">
-                        <i class="fa fa-twitter"></i>
-                    </a>
-                    <a href="http://facebook.com/andrewgioia" class="right-margin-15">
-                        <i class="fa fa-facebook"></i>
-                    </a>
-                    <a href="https://github.com/andrewgioia" class="right-margin-15">
-                        <i class="fa fa-github"></i>
-                    </a>
-                    <a href="http://linkedin.com/in/andrewgioia" class="right-margin-15">
-                        <i class="fa fa-linkedin"></i>
-                    </a>
-                    <a href="https://www.flickr.com/photos/andrewgioia/">
-                        <i class="fa fa-flickr"></i>
-                    </a>
+                    <h1>Andrew Gioia</h1>
+                    <p class="no-bottom-margin bold-weight serif-font font-size-21">Co-founder of TeachBoost</p>
+                    <p class="no-top-margin bottom-margin-20 font-size-19">Philadephia, PA</p>
+                    <p class="font-size-17">
+                        Technologist, lawyer, and amateur craftsman.<br />
+                        I'm passionate about clean design and simple living.
+                    </p>
+                    <div class="top-margin-40 bottom-padding-40">
+                        <a href="mailto:hi@andrewgioia.com" class="right-margin-15">
+                            <i class="fa fa-envelope-o"></i>
+                        </a>
+                        <a href="http://twitter.com/andrewgioia" class="right-margin-15">
+                            <i class="fa fa-twitter"></i>
+                        </a>
+                        <a href="http://facebook.com/andrewgioia" class="right-margin-15">
+                            <i class="fa fa-facebook"></i>
+                        </a>
+                        <a href="https://github.com/andrewgioia" class="right-margin-15">
+                            <i class="fa fa-github"></i>
+                        </a>
+                        <a href="http://linkedin.com/in/andrewgioia" class="right-margin-15">
+                            <i class="fa fa-linkedin"></i>
+                        </a>
+                        <a href="https://www.flickr.com/photos/andrewgioia/">
+                            <i class="fa fa-flickr"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
         </article>
@@ -116,7 +118,7 @@
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-xs-10 col-xs-offset-1
-                                col-sm-6 col-sm-offset-1">
+                                col-sm-7 col-sm-offset-1">
                         <h1 class="no-margin">
                             A Brief History.
                         </h1>
@@ -133,11 +135,10 @@
                             In my free time I enjoy building data-visualization tools, tinkering with our growing home automation setup, <a href="http://aisphila.org">learning Italian</a> and woodworking, and spending as much time as possible with my beautiful wife, Beth, and our dog, Maggie.
                         </p>
                         <p>
-                            Take a look below for some of the things I work(ed) on and don't hesitate to <a href="#em" class="self">say hi</a>!
+                            Take a look below for some of the things I work(ed) on and please don't hesitate to <a href="#em" class="self">say hi</a>!
                         </p>
                     </div>
-                    <div class="col-xs-10 col-xs-offset-1
-                                col-sm-3 col-sm-offset-1">
+                    <div id="headcut" class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
                         <div class="centered-text" style="width: 200px;">
                             <img src="public/img/andrew/hedcut-v1.png" width="200" />
                             <p class="no-margin top-padding-10 font-size-15 line-height-1-4">
@@ -210,7 +211,7 @@
                         Send me a note!
                     </h2>
                     <div class="row left-justified">
-                        <div class="col col-xs-8 col-xs-offset-1">
+                        <div id="fields" class="col-sm-8 col-sm-offset-1 col-xs-10 col-xs-offset-1">
                             <form id="contact" class="form" method="post" action="email.php">
                                 <div class="fields">
                                     <div id="name"
@@ -265,7 +266,7 @@
                                 </div>
                             </form>
                         </div>
-                        <div id="steps" class="col col-xs-2 top-padding-20">
+                        <div id="steps" class="col-sm-2 col-sm-offset-0 col-xs-10 col-xs-offset-1">
                             <a href="javascript:;"
                                data-field="name"
                                data-order="1"

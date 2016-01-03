@@ -126,11 +126,16 @@ article {
         background: #f6f5f1;
         padding: 125px 0 75px;
 
+        h1,
+        h2 {
+            padding-left: 20px;
+        }
+
         p {
             color: #686868;
             font-size: 18px;
             line-height: 1.8em;
-            margin: 0 0 25px;
+            margin: 0 0 25px 20px;
         }
 
     }
@@ -165,7 +170,7 @@ article {
         }
 
         h2 {
-            font-size: 56px;
+            font-size: 42px;
             margin-top: -50px;
         }
 
@@ -231,6 +236,35 @@ article {
                         background: #CA745D;
                         border-color: #CA745D;
                     }
+                }
+            }
+        }
+
+        // col-xs fix
+        @media ( max-width: 768px ) {
+            .inner {
+                padding-top: 150px;
+                vertical-align: top;
+                height: auto;
+            }
+            h2 {
+                font-size: 36px;
+            }
+            h3 {
+                font-size: 24px;
+            }
+            .bigfield {
+                font-size: 24px;
+            }
+            #steps {
+                position: absolute;
+                bottom: 100px;
+
+                .step-link {
+                    float: left;
+                }
+                .continue {
+                    margin-top: -10px;
                 }
             }
         }

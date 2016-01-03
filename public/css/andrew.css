@@ -288,11 +288,15 @@ article#me {
   background: #f6f5f1;
   padding: 125px 0 75px;
 }
+article#me h1,
+article#me h2 {
+  padding-left: 20px;
+}
 article#me p {
   color: #686868;
   font-size: 18px;
   line-height: 1.8em;
-  margin: 0 0 25px;
+  margin: 0 0 25px 20px;
 }
 article#pj {
   background: #fff;
@@ -316,7 +320,7 @@ article#em h3 {
   color: #fff;
 }
 article#em h2 {
-  font-size: 56px;
+  font-size: 42px;
   margin-top: -50px;
 }
 article#em h3 {
@@ -375,6 +379,32 @@ article#em #steps .continue.submit {
 article#em #steps .continue.submit:hover {
   background: #CA745D;
   border-color: #CA745D;
+}
+@media (max-width: 768px) {
+  article#em .inner {
+    padding-top: 150px;
+    vertical-align: top;
+    height: auto;
+  }
+  article#em h2 {
+    font-size: 36px;
+  }
+  article#em h3 {
+    font-size: 24px;
+  }
+  article#em .bigfield {
+    font-size: 24px;
+  }
+  article#em #steps {
+    position: absolute;
+    bottom: 100px;
+  }
+  article#em #steps .step-link {
+    float: left;
+  }
+  article#em #steps .continue {
+    margin-top: -10px;
+  }
 }
 footer {
   background: #fff;
