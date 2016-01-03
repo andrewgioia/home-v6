@@ -1,0 +1,44 @@
+/*
+ * Narrow mobile screens */
+
+@media ( max-width: 768px ) {
+
+    // show the nav in icon form
+    menu {
+        display: block;
+
+        span.default {
+            display: none;
+        }
+        i.narrow {
+            display: inline-block;
+        }
+    }
+
+    // reduce some font sizes
+    h1 { font-size: 32px; }
+    h2 { font-size: 24px; }
+    footer { font-size: 15px; }
+
+    // reduce some paddings
+    article#me {
+        padding-top: 75px;
+        h1, h2 { padding-left: 0; }
+        p {
+            font-size: 16px;
+            line-height: 1.7em;
+            margin-left: 0;
+        }
+
+    }
+    article#pj {
+        h2 { margin: 10px 0 15px; }
+        li { font-size: 16px; }
+    }
+    #headcut > div {
+        margin: 0 auto;
+    }
+    .hide-768 {
+        display: none !important;
+    }
+}

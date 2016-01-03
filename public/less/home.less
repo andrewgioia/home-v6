@@ -33,10 +33,13 @@ header {
         float: right;
         padding: 0 15px 0 5px;
 
-        > a {
+        #open {
             color: #383838;
             &:hover {
                 color: #398FA5;
+            }
+            &.open .fa:before {
+                content: "\f00d";
             }
         }
     }
@@ -66,6 +69,10 @@ header {
         .item {
             display: inline-block;
             margin: 0 10px 0 5px;
+        }
+
+        .narrow {
+            display: none;
         }
     }
 

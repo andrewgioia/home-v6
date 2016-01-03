@@ -210,11 +210,14 @@ header aside {
   float: right;
   padding: 0 15px 0 5px;
 }
-header aside > a {
+header aside #open {
   color: #383838;
 }
-header aside > a:hover {
+header aside #open:hover {
   color: #398FA5;
+}
+header aside #open.open .fa:before {
+  content: "\f00d";
 }
 header.more {
   background-color: rgba(255, 255, 255, 0.8);
@@ -239,6 +242,9 @@ header menu {
 header menu .item {
   display: inline-block;
   margin: 0 10px 0 5px;
+}
+header menu .narrow {
+  display: none;
 }
 /*
  * Main content panes */
@@ -1123,4 +1129,50 @@ select {
  * Specials */
 .cursor-disallow {
   cursor: not-allowed;
+}
+/*
+ * Narrow mobile screens */
+@media (max-width: 768px) {
+  menu {
+    display: block;
+  }
+  menu span.default {
+    display: none;
+  }
+  menu i.narrow {
+    display: inline-block;
+  }
+  h1 {
+    font-size: 32px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  footer {
+    font-size: 15px;
+  }
+  article#me {
+    padding-top: 75px;
+  }
+  article#me h1,
+  article#me h2 {
+    padding-left: 0;
+  }
+  article#me p {
+    font-size: 16px;
+    line-height: 1.7em;
+    margin-left: 0;
+  }
+  article#pj h2 {
+    margin: 10px 0 15px;
+  }
+  article#pj li {
+    font-size: 16px;
+  }
+  #headcut > div {
+    margin: 0 auto;
+  }
+  .hide-768 {
+    display: none !important;
+  }
 }
