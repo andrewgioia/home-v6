@@ -27,7 +27,6 @@ h6 {
 }
 p {
   line-height: 1.4em;
-  font-weight: 300;
 }
 /*
  * Links */
@@ -315,7 +314,7 @@ article#pj ol.projects li {
   line-height: 1.6em;
   margin: 0 0 15px;
 }
-article#pj ol.projects li a {
+article#pj ol.projects li a.title-font {
   font-weight: bold;
 }
 article#em {
