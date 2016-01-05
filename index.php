@@ -126,8 +126,7 @@
         <article id="me">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-xs-12 col-xs-offset-0
-                                col-sm-7 col-sm-offset-1">
+                    <div class="col-xs-12 col-xs-offset-0 col-sm-7 col-sm-offset-1 col-md-6 col-md-offset-2">
                         <h1 class="no-margin">
                             Background
                         </h1>
@@ -149,7 +148,7 @@
                     </div>
                     <div id="headcut" class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
                         <div class="centered-text" style="width: 200px;">
-                            <img src="public/img/andrew/hedcut-v1.png" width="200" />
+                            <img src="public/img/andrew/carolina.jpg" width="200" />
                             <p class="no-margin top-padding-10 font-size-15 line-height-1-4">
                                 <em>Andrew Gioia</em>, 2015
                                 <br />

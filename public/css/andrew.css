@@ -293,15 +293,19 @@ article#me {
   background: #f6f5f1;
   padding: 125px 0 75px;
 }
-article#me h1,
-article#me h2 {
-  padding-left: 20px;
-}
 article#me p {
   color: #686868;
   font-size: 18px;
   line-height: 1.8em;
-  margin: 0 0 25px 20px;
+  margin: 0 0 25px;
+}
+article#me #headcut {
+  padding-top: 120px;
+}
+article#me #headcut img {
+  border-radius: 5px;
+  border: 1px solid #66A3B6;
+  padding: 2px;
 }
 article#pj {
   background: #fff;
@@ -1162,14 +1166,17 @@ select {
     line-height: 1.7em;
     margin-left: 0;
   }
+  article#me #headcut {
+    padding-top: 20px;
+  }
+  article#me #headcut > div {
+    margin: 0 auto;
+  }
   article#pj h2 {
     margin: 10px 0 15px;
   }
   article#pj li {
     font-size: 16px;
-  }
-  #headcut > div {
-    margin: 0 auto;
   }
   .hide-768 {
     display: none !important;
