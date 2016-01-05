@@ -147,8 +147,8 @@
                         </p>
                     </div>
                     <div id="headcut" class="col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-0">
-                        <div class="centered-text" style="width: 200px;">
-                            <img src="public/img/andrew/carolina.jpg" width="200" />
+                        <div class="centered-text" style="width: 180px;">
+                            <img src="public/img/andrew/carolina.jpg" width="180" />
                             <p class="no-margin top-padding-10 font-size-15 line-height-1-4">
                                 <em>Andrew Gioia</em>, 2015
                                 <br />
