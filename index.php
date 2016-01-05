@@ -192,7 +192,7 @@
                         <h2>Writing</h2>
                         <ol class="projects left-justified">
                             <li>
-                                <a href="http://medium.com/particle-bits" class="title-font no-border">Particle Bits</a>&mdash;budding blog with Mike on web development, design, technology, and internet thoughts. <em>See also</em> <a href="http://medium.com/@andrewgioia">medium/@andrewgioia</a>.
+                                <a href="http://medium.com/particle-bits" class="title-font no-border">Particle Bits</a>&mdash;budding blog with Mike on web development, design, technology, and internet thoughts. <em>See also</em> <a href="http://medium.com/@andrewgioia">medium.com/@andrewgioia</a>.
                             </li>
                             <li>
                                 <a href="http://www.mttlr.org/wp-content/journal/volfifteen/gioia.pdf" class="title-font no-border">FCC Jurisdiction Over ISPs in Protocol-Specific Bandwidth Throttling</a>&mdash;note published in Michigan Telecommunications and Technology Law Review (Spring 2009) on the FCC's legal grounds to enforce net neutrality.
