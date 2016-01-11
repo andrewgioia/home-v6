@@ -187,8 +187,7 @@
                             </li>
                         </ol>
                     </div>
-                    <div class="col-sm-8 col-sm-offset-2
-                                centered-text top-padding-10">
+                    <div class="col-sm-8 col-sm-offset-2 centered-text top-padding-10">
                         <h2>Writing</h2>
                         <ol class="projects left-justified">
                             <li>
@@ -196,6 +195,14 @@
                             </li>
                             <li>
                                 <a href="http://www.mttlr.org/wp-content/journal/volfifteen/gioia.pdf" class="title-font no-border">FCC Jurisdiction Over ISPs in Protocol-Specific Bandwidth Throttling</a>&mdash;note published in Michigan Telecommunications and Technology Law Review (Spring 2009) on the FCC's legal grounds to enforce net neutrality.
+                            </li>
+                        </ol>
+                    </div>
+                    <div class="col-sm-8 col-sm-offset-2 centered-text top-padding-10">
+                        <h2>Art and Design</h2>
+                        <ol class="projects left-justified">
+                            <li>
+                                <a href="http://flickr.com/photos/andrewgioia/albums/72157662861503640" class="title-font no-border">Acrylic and watercolor paintings</a>&mdash;Some recent paintings I've done on canvas or watercolor paper, in either Acrylic, gouache, or watercolor.
                             </li>
                         </ol>
                     </div>
